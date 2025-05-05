@@ -1,13 +1,12 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 8000;
-const mongoose = require('mongoose');
 // const users = require('./app/users');
+const mongoose = require('mongoose');
 
 async function start() {
-  await mongoose.connect('mongodb://localhost:27017/toDo');
-
+  await mongoose.connect('mongodb://localhost:27017/shop');
   app.use(express.json());
   // app.use('/users', users);
 
